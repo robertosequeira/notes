@@ -1,6 +1,4 @@
-# Notes
-
-## Git
+# Git
 
 * Init/Set repository
   ```
