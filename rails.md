@@ -38,8 +38,8 @@ https://rvm.io/integration/gnome-terminal - Integrate rvm with gnome terminal
 
 ## Rake
 
-`bundle exec rake -T` - List available rake tasks
+`rake -T` - List available rake tasks
 
-`bundle exec rake -T db` - List available rake db tasks
+`rake -T db` - List available rake db tasks
 
-`bundle exec rake db:migrate`
+`rake db:migrate`
