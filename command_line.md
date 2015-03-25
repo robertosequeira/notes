@@ -1,5 +1,7 @@
 # Command line
 
+## Common commands
+
 | Description                         | Command              | Example                      |
 | ----------------------------------- |:--------------------:| ---------------------------- |
 | list contents                       | ls                   | `$ ls -l`                    |
@@ -15,5 +17,10 @@
 | remove nonempty directory           |	rm -rf <directory>   | `$ rm -rf tmp/`              |
 | concatenate & display file contents |	cat <file>           | `$ cat ~/.ssh/id_rsa.pub`    |
 
-
 **Source** [Ruby on Rails tutorial](https://www.railstutorial.org/book/)
+
+## Execute .sh file
+
+`chmod 755 clone_repos.sh` - Give execution permission
+
+`./clone_repos.sh` - Execute .sh files
