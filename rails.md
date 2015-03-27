@@ -69,7 +69,6 @@
   `rails server`
 
 * Scaffolding
-
 ````
   rails generate scaffold Store name:string address:string
   rails generate scaffold Article name:string description:text price:decimal total_in_shelf:integer total_in_vault:integer store_id:intege
