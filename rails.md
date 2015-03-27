@@ -28,7 +28,7 @@
 
   `rvm --ruby-version use 2.1.1 --create`
 
-*Create .ruby-version and .ruby-gemset file
+* Create .ruby-version and .ruby-gemset file
 
   `rvm --ruby-version use ree@my_app --create`
 
