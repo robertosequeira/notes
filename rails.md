@@ -2,44 +2,89 @@
 
 ## RVM
 
-`\curl -sSL https://get.rvm.io | bash -s stable` - [Install RVM](https://rvm.io/rvm/install)
+[Install RVM](https://rvm.io/rvm/install)
 
-`rvm list known` - List available ruby versions
+`\curl -sSL https://get.rvm.io | bash -s stable`
 
-`rvm install ree`, `rvm install ruby-2.0.0`, `rvm install 2.0.0` - Install a specific ruby version
+List available ruby versions
 
-https://rvm.io/integration/gnome-terminal - Integrate rvm with gnome terminal
+`rvm list known`
 
-`rvm --default use 2.1.1`- Set default ruby version
+Install a specific ruby version
+ 
+```
+rvm install ree
+rvm install ruby-2.0.0
+rvm install 2.0.0
+```
 
-`rvm --ruby-version use 2.1.1 --create` - Create .ruby-version file
+Integrate rvm with gnome terminal (https://rvm.io/integration/gnome-terminal)
 
-`rvm --ruby-version use ree@my_app --create` - Create .ruby-version and .ruby-gemset file
+Set default ruby version
 
-`rvm list` - List installed ruby versions
+`rvm --default use 2.1.1`
 
-`rvm gemset list` - List gemsets for current ruby version
+Create .ruby-version file
 
-`rvm list gemsets` - List gemsets across all installed ruby versions
+`rvm --ruby-version use 2.1.1 --create`
+
+Create .ruby-version and .ruby-gemset file
+
+`rvm --ruby-version use ree@my_app --create`
+
+List installed ruby versions
+
+`rvm list`
+
+List gemsets for current ruby version
+
+`rvm gemset list`
+
+List gemsets across all installed ruby versions
+
+`rvm list gemsets`
 
 ## Rails
 
-`gem install rails -v 3.0.20`, `gem install rails` - Install required rails version
+Install required rails version
 
-`rails new my_app`, `rails new ~/Desktop/my_app` - Create new rails application
+```
+gem install rails
+gem install rails -v 3.0.20
+```
 
-`bundle install` - Install dependencies listed in Gemfile
+Create new rails application
 
-`rails server` - Start the rails server
+````
+rails new my_app`
+rails new ~/Desktop/my_app
+```
 
-`rails generate scaffold Store name:string address:string`
+Install dependencies listed in Gemfile
 
-`rails generate scaffold Article name:string description:text price:decimal total_in_shelf:integer total_in_vault:integer store_id:intege`
+`bundle install`
+
+Start the rails server
+
+`rails server`
+
+Scaffolding
+
+````
+rails generate scaffold Store name:string address:string
+rails generate scaffold Article name:string description:text price:decimal total_in_shelf:integer total_in_vault:integer store_id:intege
+```
 
 ## Rake
 
-`rake -T` - List available rake tasks
+List available rake tasks
 
-`rake -T db` - List available rake db tasks
+`rake -T`
+
+List available rake db tasks
+
+`rake -T db`
+
+Execute migrations
 
 `rake db:migrate`
