@@ -11,7 +11,6 @@
   `rvm list known`
 
 * Install a specific ruby version
-
 ```
   rvm install ree
   rvm install ruby-2.0.0
@@ -47,15 +46,13 @@
 ## Rails
 
 * Install required rails version
-
 ```
   gem install rails
   gem install rails -v 3.0.20
 ```
 
 * Create new rails application
-
-````
+```
   rails new my_app`
   rails new ~/Desktop/my_app
 ```
@@ -69,7 +66,7 @@
   `rails server`
 
 * Scaffolding
-````
+```
   rails generate scaffold Store name:string address:string
   rails generate scaffold Article name:string description:text price:decimal total_in_shelf:integer total_in_vault:integer store_id:intege
 ```
@@ -86,4 +83,4 @@
 
 Execute migrations
 
-`rake db:migrate`
+  `rake db:migrate`
