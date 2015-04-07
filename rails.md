@@ -81,6 +81,12 @@
 
   `rake -T db`
 
-Execute migrations
+* Execute migrations
 
   `rake db:migrate`
+
+## Other stuff
+
+* Kill rails server
+
+  `kill -9 $(lsof -i tcp:3000 -t)`
