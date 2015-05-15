@@ -19,6 +19,8 @@
 
 **Source** [Ruby on Rails tutorial](https://www.railstutorial.org/book/)
 
+`ln -s target link_name` - Create a symlink
+
 ## Execute .sh file
 
 `chmod 755 clone_repos.sh` - Give execution permission
