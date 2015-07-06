@@ -53,7 +53,7 @@
 
 * Create new rails application
 ```
-  rails new my_app`
+  rails new my_app
   rails new ~/Desktop/my_app
 ```
 
