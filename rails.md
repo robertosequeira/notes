@@ -61,9 +61,14 @@
 
   `bundle install`
 
-* Start the rails server
+* Start rails server
 
-  `rails server`
+  ```
+  rails server
+  rails s
+  rails s -p 3001
+  ```
+  
 
 * Scaffolding
 ```
