@@ -36,3 +36,9 @@ $
 ```
 sudo nginx -t
 ```
+
+* Set permissions on log folder and files
+```
+sudo chown -R www-data:www-data /var/log/nginx;
+sudo chmod -R 755 /var/log/nginx;
+```
