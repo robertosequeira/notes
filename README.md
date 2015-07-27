@@ -1,10 +1,13 @@
 # Notes
 
-* [Unix command line](command_line.md "Command line notes")
-* [Ubuntu](ubuntu.md "Ubuntu notes")
-* [NGINX](nginx.md "Nginx notes")
+## Server 
 
+1. [Unix command line](command_line.md "Command line notes")
+2. [Ubuntu](ubuntu.md "Ubuntu notes")
+3. [NGINX](nginx.md "Nginx notes")
 
-* [Rails](rails.md "Rails notes")
-* [Git](git.md "Git notes")
-* [Laravel](laravel.md "Laravel notes")
+## Tools
+
+1. [Rails](rails.md "Rails notes")
+2. [Git](git.md "Git notes")
+3. [Laravel](laravel.md "Laravel notes")
