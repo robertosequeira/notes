@@ -11,7 +11,7 @@
   `rvm list known`
 
 * Install a specific ruby version
-* 
+
 ```
   rvm install ree
   rvm install ruby-2.0.0
@@ -69,9 +69,9 @@
   rails s
   rails s -p 3001
   ```
-  
 
 * Scaffolding
+
 ```
   rails generate scaffold Store name:string address:string
   rails generate scaffold Article name:string description:text price:decimal total_in_shelf:integer total_in_vault:integer store_id:intege
@@ -93,6 +93,6 @@
 
 ## Other stuff
 
-* Kill rails server
+* Kill rails dev server
 
   `kill -9 $(lsof -i tcp:3000 -t)`
