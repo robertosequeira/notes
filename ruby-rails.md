@@ -12,11 +12,11 @@
 
 * Install a specific ruby version
 
-```
+  ```
   rvm install ree
   rvm install ruby-2.0.0
   rvm install 2.0.0
-```
+  ```
 
 * Integrate rvm with gnome terminal (https://rvm.io/integration/gnome-terminal)
 
@@ -47,16 +47,18 @@
 ## Rails
 
 * Install required rails version
-```
+
+  ```
   gem install rails
   gem install rails -v 3.0.20
-```
+  ```
 
 * Create new rails application
-```
+
+  ```
   rails new my_app
   rails new ~/Desktop/my_app
-```
+  ```
 
 * Install dependencies listed in Gemfile
 
@@ -72,10 +74,10 @@
 
 * Scaffolding
 
-```
+  ```
   rails generate scaffold Store name:string address:string
   rails generate scaffold Article name:string description:text price:decimal total_in_shelf:integer total_in_vault:integer store_id:intege
-```
+  ```
 
 ## Rake
 
@@ -90,6 +92,12 @@
 * Execute migrations
 
   `rake db:migrate`
+  
+## Ruby gems
+
+* Update RubyGems
+
+  `gem update --system`
 
 ## Other stuff
 
