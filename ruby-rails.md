@@ -36,6 +36,12 @@
 
   `rvm gemset create teddy`
 
+* Create gemset for specific ruby version
+
+  ```
+  rvm 2.2.1@rails424 --create
+  ```
+
 * List gemsets for current ruby version
 
   `rvm gemset list`
@@ -43,8 +49,18 @@
 * List gemsets across all installed ruby versions
 
   `rvm list gemsets`
+
+* Switch to gemset
+
+  ```
+  rvm gemset use rails424
+  rvm use 2.2.1@rails424 --create
+  ```
   
-  
+* Delete gemset
+
+  `rvm gemset delete rails424`
+
 ### RVM config files
 
 * Create .ruby-version file
