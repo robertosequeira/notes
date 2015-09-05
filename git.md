@@ -1,17 +1,30 @@
 # Git
 
+## Configuration
+
+* Set user data
+
+  ```
+  # Global
+  git config --global user.name 'Roberto Sequeira'
+  git config --global user.email 'hello@world.com'
+  
+  # at repo level
+  git config user.name 'Roberto Sequeira'
+  git config user.email 'hello@test.com'
+  ```
+  
+* Push only current branch
+
+  `git config --global push.default simple`
+
+## Create repo
+
 * Init/Set repository
 
   ```
   git init
   git clone git@github.com:robertosequeira/flaming-octo-batman.git
-  ```
-
-* Get from origin
-
-  ```
-  git pull
-  git pull origin master
   ```
 
 * Add file/files to repository
@@ -34,6 +47,13 @@
   ```
   git push
   git push -u origin master #-u save values origin master as default for next push
+  ```
+  
+* Get from origin
+
+  ```
+  git pull
+  git pull origin master
   ```
 
 ## Branches 
