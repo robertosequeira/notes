@@ -85,6 +85,7 @@
   ```
   rails new my_app
   rails new ~/Desktop/my_app
+  rails new . # use current directory
   ```
 
 * Install dependencies listed in Gemfile
