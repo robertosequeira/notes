@@ -1,4 +1,4 @@
-# Rails
+# Ruby - Rails
 
 ## RVM
 
@@ -11,6 +11,7 @@
   `rvm list known`
 
 * Install a specific ruby version
+* 
 ```
   rvm install ree
   rvm install ruby-2.0.0
