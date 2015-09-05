@@ -55,6 +55,7 @@
   git branch -d test
   git branch -D test # abandon and delete branch even if there pending changes to be merged
   ```
+  
 ## Remote
 
 * Set remote repository
@@ -118,9 +119,7 @@ Now to change the order of those commits you only need to change the order of th
 
 Same approach can be used to remove a commit
 
-  ```
-  git rebase -i HEAD~3
-  ```
+  `git rebase -i HEAD~3`
 
 Now information related to specified commits is going to be displayed
 
