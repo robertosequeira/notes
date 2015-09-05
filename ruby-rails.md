@@ -6,6 +6,10 @@
 
   `\curl -sSL https://get.rvm.io | bash -s stable`
 
+* Integrate rvm with gnome terminal (https://rvm.io/integration/gnome-terminal)
+
+### Install Ruby
+
 * List available ruby versions
 
   `rvm list known`
@@ -18,23 +22,19 @@
   rvm install 2.0.0
   ```
 
-* Integrate rvm with gnome terminal (https://rvm.io/integration/gnome-terminal)
-
 * Set default ruby version
 
   `rvm --default use 2.1.1`
 
-* Create .ruby-version file
-
-  `rvm --ruby-version use 2.1.1 --create`
-
-* Create .ruby-version and .ruby-gemset file
-
-  `rvm --ruby-version use ree@my_app --create`
-
 * List installed ruby versions
 
   `rvm list`
+
+### Gemsets
+
+* Create a gemset
+
+  `rvm gemset create teddy`
 
 * List gemsets for current ruby version
 
@@ -43,6 +43,17 @@
 * List gemsets across all installed ruby versions
 
   `rvm list gemsets`
+  
+  
+### RVM config files
+
+* Create .ruby-version file
+
+  `rvm --ruby-version use 2.1.1 --create`
+
+* Create .ruby-version and .ruby-gemset file
+
+  `rvm --ruby-version use ree@my_app --create`
 
 ## Rails
 
