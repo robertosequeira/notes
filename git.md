@@ -6,54 +6,54 @@
 
   ```
   # Global
-  git config --global user.name 'Roberto Sequeira'
-  git config --global user.email 'hello@world.com'
+  $ git config --global user.name 'Roberto Sequeira'
+  $ git config --global user.email 'hello@world.com'
   
   # at repo level
-  git config user.name 'Roberto Sequeira'
-  git config user.email 'hello@test.com'
+  $ git config user.name 'Roberto Sequeira'
+  $ git config user.email 'hello@test.com'
   ```
   
 * Push only current branch
 
-  `git config --global push.default simple`
+  `$ git config --global push.default simple`
 
 ## Create repo
 
 * Init/Set repository
 
   ```
-  git init
-  git clone git@github.com:robertosequeira/flaming-octo-batman.git
+  $ git init
+  $ git clone git@github.com:robertosequeira/flaming-octo-batman.git
   ```
 
 * Add file/files to repository
 
   ```
-  git add index.html
-  git add "*.html"
-  git add -A #add all new pending changes
+  $ git add index.html
+  $ git add "*.html"
+  $ git add -A #add all new pending changes
   ```
 
 * Commit changes
 
   ```
-  git commit -m "Added home page"
-  git commit -a -m "Added some files" 
+  $ git commit -m "Added home page"
+  $ git commit -a -m "Added some files" 
   ```
 
 * Push changes
 
   ```
-  git push
-  git push -u origin master #-u save values origin master as default for next push
+  $ git push
+  $ git push -u origin master #-u save values origin master as default for next push
   ```
   
 * Get from origin
 
   ```
-  git pull
-  git pull origin master
+  $ git pull
+  $ git pull origin master
   ```
 
 ## Branches 
@@ -61,63 +61,65 @@
 * Create branch
 
   ```
-  git branch test
-  git checkout -b test #create and checkout branch
+  $ git branch test
+  $ git checkout -b test #create and checkout branch
   ```
 
 * Switch branch
 
-  `git checkout master`
+  `$ git checkout master`
   
 * Delete branch
 
   ```
-  git branch -d test
-  git branch -D test # abandon and delete branch even if there pending changes to be merged
+  $ git branch -d test
+  $ git branch -D test # abandon and delete branch even if there pending changes to be merged
   ```
   
 ## Remote
 
 * Set remote repository
 
-  `git remote add origin git@github.com:robertosequeira/flaming-octo-batman.git`
-  
+  ```
+  $ git remote add origin git@github.com:robertosequeira/flaming-octo-batman.git
+  ```
+
 * List remotes
 
   ```
-  git remote -v
-  git remote show
-  git remote show origin
+  $ git remote -v
+  $ git remote show
+  $ git remote show origin
   ```
 
 ## Repo status
 
 * See repository history
   
-  `git log`
+  `$ git log`
 
 * See repository status (Files added, removed, etc) 
 
-  `git status`
+  `$ git status`
 
 ## Undo changes
 
 * Undo changes up to a specific commit and push changes
 
   ```
-  git reset --hard 1a0a06de757776662e73efc813077225c842f2d8
-  git push --force
+  $ git reset --hard 1a0a06de757776662e73efc813077225c842f2d8
+  $ git push --force
   ```
 
 * Undo current changes
 
-  `git checkout -f`
+  `$ git checkout -f`
   
 ## Reorder commits
 
 Lets say you want to reoder last 3 commits so you enter at the command line:
 
-  `git rebase -i HEAD~3`
+  `$ git rebase -i HEAD~3`
 
 After that the command line is going to display information about specified commits:
 
@@ -139,7 +141,7 @@ Now to change the order of those commits you only need to change the order of th
 
 Same approach can be used to remove a commit
 
-  `git rebase -i HEAD~3`
+  `$ git rebase -i HEAD~3`
 
 Now information related to specified commits is going to be displayed
 
@@ -162,7 +164,7 @@ From now "Commit file 4" does not exits
 
 Lets say you want to squash last 3 commits so you enter at the command line:
 
-  `git rebase -i HEAD~3`
+  `$ git rebase -i HEAD~3`
 
 Now your are going to see information related to last 3 commits
 
@@ -184,6 +186,3 @@ For previous example changes from "Commit file 4" and "Commit file 5" are going 
 After git merge all changes the user is going to be able to edit the new commit message. By default all messages from original commits are going to be included in the new commit message.
 
 Reference (Reorder, remove, squash): https://git-scm.com/book/es/v2/Git-Tools-Rewriting-History
-  
-  
-  
