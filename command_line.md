@@ -19,9 +19,13 @@
 
 **Source** [Ruby on Rails tutorial](https://www.railstutorial.org/book/)
 
-* Create a symlink
+----
 
-  `$ ln -s target link_name`
+
+| Description                   | Command                             |
+| ----------------------------- | ----------------------------------- |
+| Create a symlink              | $ ln -s target link_name            | 
+| Print working directory       | $ pwd                               |
 
 ## Execute .sh file
 
