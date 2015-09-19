@@ -5,6 +5,7 @@
 1. [Command line](command_line.md "Command line notes")
 2. [Ubuntu](ubuntu.md "Ubuntu notes")
 3. [NGINX](nginx.md "Nginx notes")
+4. [Heroku](heroku.md "Heroku CLI")
 
 ## Tools
 
