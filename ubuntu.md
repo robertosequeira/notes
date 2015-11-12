@@ -9,9 +9,13 @@
 
 * Update ubuntu from the command line
 
+  https://help.ubuntu.com/community/AptGet/Howto
+
   ```
   $ sudo apt-get update && sudo apt-get dist-upgrade
   ```
+
+
 
 # Server setup
 
