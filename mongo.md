@@ -30,6 +30,7 @@ mongoimport --db test --collection zips --drop --file zips.json
 
 Reference:
  - https://docs.mongodb.org/ecosystem/tutorial/ruby-driver-tutorial/
+ - https://github.com/mongodb/mongo-ruby-driver/wiki
 
 ### irb
 
