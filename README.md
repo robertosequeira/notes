@@ -7,6 +7,7 @@
 3. [NGINX](nginx.md "Nginx notes")
 4. [MongoDB](mongo.md "MongoDB")
 5. [Heroku](heroku.md "Heroku CLI")
+6. [PostgreSQL](postgresql.md "PostgreSQL")
 
 ## Tools
 
