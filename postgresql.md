@@ -1,5 +1,88 @@
 # Postgres
 
+* Install
+  ```
+  $ sudo apt-get update
+  $ sudo apt-get install postgresql postgresql-contrib
+  ```
+
+* Verify access
+
+  ```
+  $ sudo -i -u postgres
+  $ psql
+  $ \q
+  $ exit
+  ```
+
+* Create role and set password
+
+  ```
+  $ sudo -i -u postgres
+  $ createuser --interactive
+  # Create rails role
+  $ psql
+  $ \password rails
+  $ \q
+  $ exit
+  ```
+
+* Delete a existing role
+
+  ```
+  $ sudo -i -u postgres  
+  $ psql
+  $ DROP ROLE role_name;
+  $ \q
+  $ exit
+  ```
+
+
+* List existing databases
+
+  ```
+  $ sudo -i -u postgres
+  $ psql
+  $ \list
+  $ \q
+  $ exit
+  ```
+
+* List existing roles
+
+  ```
+  $ sudo -i -u postgres
+  $ psql
+  $ \du
+  $ \q
+  $ exit
+  ```
+
+* Create a new DB
+
+  ```
+  $ sudo -i -u postgres
+  $ createdb hello`
+  $ exit
+  ```
+
+
+* Get info about current connection (User, database, etc.)
+
+  `conninfo`
+
+* Connect to postgres specifying connection information
+
+  ```
+  psql -U postgres -d rails -h 127.0.0.1 -W
+  psql -U postgres -h 127.0.0.1
+  ```
+
+  | Paramenter  | Description |
+  | :---------: | ----------- |
+  | -U          | User        |
+  | -d          | Database    |
+  | -h          | Host        |
 
 ## Testing querys with provided values
 
