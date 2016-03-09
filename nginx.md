@@ -1,5 +1,14 @@
 # NGINX
 
+* Install nginx
+
+  ```
+  $ sudo apt-get update
+  $ sudo apt-get install curl git-core nginx -y
+  ```
+
+
+
 * Start, restart, stop server
 
   ```
