@@ -4,7 +4,12 @@
 
 * Install RVM(https://rvm.io/rvm/install)
 
-  `\curl -sSL https://get.rvm.io | bash -s stable`
+   ```
+  $ gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
+  $ curl -sSL https://get.rvm.io | bash -s stable
+  $ source ~/.rvm/scripts/rvm
+  $ rvm requirements
+  ```
 
 * Integrate rvm with gnome terminal (https://rvm.io/integration/gnome-terminal)
 
@@ -24,7 +29,7 @@
 
 * Set default ruby version
 
-  `rvm --default use 2.1.1`
+  `rvm use 2.1.1 --default`
 
 * List installed ruby versions
 
@@ -69,7 +74,7 @@
 
 * Create .ruby-version and .ruby-gemset file
 
-  `rvm --ruby-version use ree@my_app --create`
+  `rvm use ree@my_app --create --ruby-version`
 
 ## Rails
 
