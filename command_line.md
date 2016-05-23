@@ -36,3 +36,35 @@
 * Execute script
 
   `$ ./clone_repos.sh`
+
+## Execute commands in the background
+
+- Backup a big DB
+  
+  ```
+  $ nohup pg_dump -v -U postgres my_database > my_database.dump > dump.log & 
+
+  ```
+
+- Copy a local file to a remote server over ssh. 
+ 
+  This command requires ssh keys in order for `user` being allowed to access the server. Otherwhise scp is going to ask for the password and as the process is being executed by `nohup` it's going to fail.
+
+  ```bash
+  $ nohup scp -v my_file.txt user@roberto-sequeira.com:~/ &
+  ```
+
+- Copy a local file to a remote server over ssh entering user password
+
+  ```bash
+  $ scp -v my_file.txt user@roberto-sequeira.com:~/
+  $ user@roberto-sequeira.com's password:
+  ```
+  
+  Enter password and then press `Ctrl + z` to pause process
+  
+  ```
+  $ bg
+  $ disown
+  ```
+
