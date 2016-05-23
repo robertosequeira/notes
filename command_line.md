@@ -68,3 +68,10 @@
   $ disown
   ```
 
+- List running jobs
+  
+  ```
+  $ jobs
+  ```
+
+
