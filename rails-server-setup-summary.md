@@ -66,3 +66,44 @@ $ sudo ufw status
 $ sudo apt-get update
 $ sudo apt-get install ntp
 ```
+
+## PostgreSQL Configuration
+
+### 1. Installation
+
+```shell
+$ sudo apt-get install postgresql postgresql-contrib libpq-dev
+```
+
+### 2. Login role
+
+```shell
+# impersonate postgres user
+$ sudo -i -u postgres
+$ sudo su - postgres
+
+# access postgres interactive terminal
+$ psql
+
+# list existing roles
+$ \du
+
+# list existing databases
+$ \list
+
+# exit from postgres terminal
+$ \q
+
+# create a new role
+$ createuser --interactive
+$ createuser academy
+$ createuser -s academy
+
+# set role password
+$ psql
+$ \password academy
+$ \q
+
+# create role database
+$ createdb academy
+```
