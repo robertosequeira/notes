@@ -60,11 +60,28 @@ $ sudo ufw enable
 $ sudo ufw status
 ```
 
-### Time zone and NTP
+### 4. Time zone and NTP
 
 ```shell
+# configure time zone
+$ sudo dpkg-reconfigure tzdata
+
+# install NTP
 $ sudo apt-get update
 $ sudo apt-get install ntp
+```
+
+### 5. RVM
+
+```shell
+# download verification keys
+$ gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
+
+# if previous command fails then try
+$ curl -sSL https://rvm.io/mpapis.asc | gpg --import -
+
+# install a stable version of RVM and Ruby
+$ \curl -sSL https://get.rvm.io | bash -s stable --ruby
 ```
 
 ## PostgreSQL Configuration
