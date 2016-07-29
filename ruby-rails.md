@@ -35,6 +35,14 @@
 
   `rvm list`
 
+* Enable global cache by ruby version
+
+  `rvm gemset globalcache enable`
+
+* Verify space used by RVM
+
+  `rvm disk-usage all`
+
 ### Gemsets
 
 * Create a gemset
