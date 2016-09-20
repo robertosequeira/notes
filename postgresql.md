@@ -83,6 +83,12 @@
   | -U          | User        |
   | -d          | Database    |
   | -h          | Host        |
+  
+* Show hba file location
+  
+  ```
+  SHOW hba_file;
+  ```
 
 ## Testing querys with provided values
 
