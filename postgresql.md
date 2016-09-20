@@ -66,7 +66,6 @@
   $ exit
   ```
 
-
 * Get info about current connection (User, database, etc.)
 
   `conninfo`
@@ -88,6 +87,12 @@
   
   ```
   SHOW hba_file;
+  ```
+
+* Show postgres version
+
+  ```
+  SELECT version();
   ```
 
 ## Testing querys with provided values
