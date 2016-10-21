@@ -117,3 +117,25 @@
   ```bash
   $ exit
   ```
+
+## Cron jobs
+
+By using sudo cron jobs are created/executed under root account
+
+- Add new jobs
+
+ ```bash
+ sudo crontab -e
+ ```
+
+- List jobs
+
+ ```bash
+ sudo crontab -l
+ ```
+
+- Remove jobs
+
+ ```bash
+ sudo crontab -r
+ ```
