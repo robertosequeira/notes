@@ -11,7 +11,7 @@
 
   https://help.ubuntu.com/community/AptGet/Howto
 
-  ```
+  ```bash
   $ sudo apt-get update && sudo apt-get dist-upgrade
   ```
 
@@ -21,7 +21,7 @@
 
 * If there are problems with locale configuration
 
-  ```
+  ```bash
   $ locale
   $ sudo locale-gen es_CR.UTF-8
   $ sudo nano /etc/default/locale
@@ -47,7 +47,7 @@
 
 * Add key to remote server for new user
 
-  ```
+  ```bash
   $ ssh-copy-id -i ~/.ssh/new-key_rsa.pub deploy@server-ip
   ```
 
@@ -67,7 +67,7 @@
 
 * Add required firewall rules
 
-  ```
+  ```bash
   $ sudo ufw allow ssh  
   $ sudo ufw allow 80/tcp
   # SSL/TLS
@@ -83,7 +83,7 @@
 
 * Enable/disable firewall
 
-  ```
+  ```bash
   $ sudo ufw enable
   $ sudo ufw disable
   ```
@@ -96,7 +96,7 @@
 
 * This will allow your computer to stay in sync with other servers (Time)
 
-  ```
+  ```bash
   $ sudo apt-get update
   $ sudo apt-get install ntp
   ```
@@ -107,7 +107,7 @@ https://help.ubuntu.com/community/SwapFaq
 
 * Create swap file
 
-  ```
+  ```bash
   $ sudo fallocate -l 1G /swapfile
   or
   $ sudo fallocate -l 512m /swapfile
@@ -115,9 +115,18 @@ https://help.ubuntu.com/community/SwapFaq
 
 * Finish swap configuration
 
-  ```
+  ```bash
   $ sudo chmod 600 /swapfile
   $ sudo mkswap /swapfile
   $ sudo swapon /swapfile
   $ sudo sh -c 'echo "/swapfile none swap sw 0 0" >> /etc/fstab'
+  ```
+## gnome-key-ring
+
+* To avoid all ssh identities being automatically loaded (http://askubuntu.com/questions/545172/how-do-i-disable-gnome-keyring-ssh-integration)
+
+  ```bash
+  $ mkdir -p ~/.config/autostart
+  $ cp /etc/xdg/autostart/gnome-keyring-ssh.desktop ~/.config/autostart/
+  $ echo "X-GNOME-Autostart-enabled=false" >> ~/.config/autostart/gnome-keyring-ssh.desktop
   ```
