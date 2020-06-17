@@ -160,7 +160,7 @@ Finally you only need to remove the line corresponding to the commit that needs 
 
 From now "Commit file 4" does not exits
 
-# Squash
+## Squash
 
 Lets say you want to squash last 3 commits so you enter at the command line:
 
@@ -174,15 +174,40 @@ Now your are going to see information related to last 3 commits
   pick 94c9d8e Commit file 5
   ```
 
-Now you have to specify which commits are going to be squashed
+Then you have to specify which commits are going to be squashed
 
   ```
   pick 47d0ddc Commit file 3
   squash 4e42d63 Commit file 4
   squash 94c9d8e Commit file 5
   ```
-
+  
 For previous example changes from "Commit file 4" and "Commit file 5" are going to be merged on top of "Commit file 3".
 After git merge all changes the user is going to be able to edit the new commit message. By default all messages from original commits are going to be included in the new commit message.
+
+## Reword
+
+Lets say you want to update the commit message for a old commit:
+
+  `$ git rebase -i HEAD~3`
+
+Now your are going to see information related to last 3 commits
+
+  ```
+  pick 47d0ddc Commit file 3
+  pick 4e42d63 Commit file 4
+  pick 94c9d8e Commit file 5
+  ```
+
+Then you have to specify which commits you want to update
+
+  ```
+  reword 47d0ddc Commit file 3
+  pick 4e42d63 Commit file 4
+  pick 94c9d8e Commit file 5
+  ```
+Once you continue you are going to be asked for the new commit message
+
+------
 
 Reference (Reorder, remove, squash): https://git-scm.com/book/es/v2/Git-Tools-Rewriting-History
