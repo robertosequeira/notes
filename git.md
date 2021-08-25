@@ -114,10 +114,22 @@
 * Undo current changes
 
   `$ git checkout -f`
+
+## Start an interactive rebase
+
+The interactive rebase (specified with the flag `-i`) will allow you to interact with several commits to do actions like squash, reorder, reword, etc.
+
+If you need the last **n** commits (where **n** is an integer) then you enter in the command line:
+
+  `$ git rebase -i HEAD~n`
+
+So for example, if you need the last 3 commits you would enter:
+
+  `$ git rebase -i HEAD~3`
   
 ## Reorder commits
 
-Lets say you want to reoder last 3 commits so you enter at the command line:
+If you want to reoder last 3 commits, then you can [Start an interactive rebase](#start-an-interactive-rebase) and enter in the command line:
 
   `$ git rebase -i HEAD~3`
 
@@ -129,17 +141,21 @@ After that the command line is going to display information about specified comm
   pick 94c9d8e Commit file 5
   ```
 
-Now to change the order of those commits you only need to change the order of the lines. Take into consideration that the rebase is going to pick the commits in the order they are specified (top-down) so from now "Commit file 4" is going to be the last commit.
+Now to change the order of those commits you only need to change the order of the lines and save the changes. Once you close the file the rebase will continue.
 
   ```
   pick 47d0ddc Commit file 3
   pick 94c9d8e Commit file 5
-  pick 4e42d63 Commit file 4
+  pick 4e42d63 Commit file 4 # THIS COMMIT WAS MOVED TO BE THE LAST ONE
   ```
+
+Take into consideration that the rebase is going to pick the commits in the order they are specified (top-down) so from now on "Commit file 4" is going to be the last commit.
+
+Finally you need to push the changes, if you branch was already published you will have to `git push -f` in order to update the remote with you local changes. If your branch was not publishe then you can `git push`.
 
 ## Remove a commit
 
-Same approach can be used to remove a commit
+Using the same approach you can [Start an interactive rebase](#start-an-interactive-rebase) in order to remove a commit. For example:
 
   `$ git rebase -i HEAD~3`
 
@@ -151,18 +167,20 @@ Now information related to specified commits is going to be displayed
   pick 94c9d8e Commit file 5
   ```
 
-Finally you only need to remove the line corresponding to the commit that needs to be removed and save the changes.
+You only need to remove the line corresponding to the commit that needs to be removed and save the changes. Once you close the file the rebase will continue.
 
   ```
   pick 47d0ddc Commit file 3
   pick 94c9d8e Commit file 5
   ```
 
-From now "Commit file 4" does not exits
+From now on "Commit file 4" does not exits.
+
+Finally you need to push the changes, if you branch was already published you will have to `git push -f` in order to update the remote with you local changes. If your branch was not publishe then you can `git push`.
 
 ## Squash
 
-Lets say you want to squash last 3 commits so you enter at the command line:
+If you want to squash last 3 commits, then you can [Start an interactive rebase](#start-an-interactive-rebase) and enter in the command line:
 
   `$ git rebase -i HEAD~3`
 
@@ -174,7 +192,7 @@ Now your are going to see information related to last 3 commits
   pick 94c9d8e Commit file 5
   ```
 
-Then you have to specify which commits are going to be squashed
+Then with `squash` you have to specify which commits are going to be squashed
 
   ```
   pick 47d0ddc Commit file 3
@@ -183,11 +201,16 @@ Then you have to specify which commits are going to be squashed
   ```
   
 For previous example changes from "Commit file 4" and "Commit file 5" are going to be merged on top of "Commit file 3".
-After git merge all changes the user is going to be able to edit the new commit message. By default all messages from original commits are going to be included in the new commit message.
+
+Now you just need to save the changes and once you close the file the rebase will continue.
+
+After git merges all changes the user is going to be able to edit the new commit message. By default all messages from original commits are going to be included in the new commit message.
+
+Finally you need to push the changes, if you branch was already published you will have to `git push -f` in order to update the remote with you local changes. If your branch was not publishe then you can `git push`.
 
 ## Reword
 
-Lets say you want to update the commit message for a old commit:
+If you want to update the commit message for a old commit, then you can [Start an interactive rebase](#start-an-interactive-rebase) and enter in the command line:
 
   `$ git rebase -i HEAD~3`
 
@@ -199,14 +222,17 @@ Now your are going to see information related to last 3 commits
   pick 94c9d8e Commit file 5
   ```
 
-Then you have to specify which commits you want to update
+Then using `reword` you have to specify which commits you want to update
 
   ```
   reword 47d0ddc Commit file 3
   pick 4e42d63 Commit file 4
   pick 94c9d8e Commit file 5
   ```
-Once you continue you are going to be asked for the new commit message
+
+Once you save the changes and close the file the rebase will continue and you are going to be asked for the new commit message for the commit you marked with `reword`.
+
+Finally you need to push the changes, if you branch was already published you will have to `git push -f` in order to update the remote with you local changes. If your branch was not publishe then you can `git push`.
 
 ------
 
